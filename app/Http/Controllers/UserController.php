@@ -17,6 +17,11 @@ class UserController extends Controller
         return view('auth.dashboard');
     }
 
+    public function profile()
+    {
+        return view('auth.profile');
+    }
+    
     public function logout(Request $request): RedirectResponse
     {
         Auth::logout();

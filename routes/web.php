@@ -9,6 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [UserController::class, 'dashboard'])->middleware(isLogin::class);
+Route::get('/profile', [UserController::class, 'profile'])->middleware(isLogin::class);
 Route::get('/logout', [UserController::class, 'logout'])->middleware(isLogin::class);
 
 Route::get('/login', [UserController::class, 'login'])->name('auth.login');
