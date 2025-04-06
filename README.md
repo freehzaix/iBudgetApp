@@ -3,4 +3,4 @@
 ### Liste des fonctionnalités réalisés
 
     - Authentification Login/Register/Logout
-    - Modifier son profil
+    - Modifier son profil (en cours...)
