@@ -86,7 +86,7 @@
                                         </div>
                                     </form>
                                     <div class="new-account mt-3">
-                                        <p>Déjà un compte? <a class="text-primary" href="{{ route('auth.login') }}">Se
+                                        <p>Déjà un compte? <a class="text-primary" href="{{ route('login') }}">Se
                                                 connecter</a></p>
                                     </div>
                                 </div>

@@ -44,7 +44,7 @@
                             <div class="col-xl-12">
                                 <div class="auth-form">
                                     <div class="text-center mb-3">
-                                        <a href="{{ route('auth.login') }}"><img src="images/logo-full.png" alt=""></a>
+                                        <a href="{{ route('login') }}"><img src="images/logo-full.png" alt=""></a>
                                         @if(session('status'))
                                           <div class="alert alert-success"> {{ session('status') }} </div>
                                         @endif
@@ -73,7 +73,7 @@
                                     </form>
                                     <div class="new-account mt-3">
                                         <p>Pas encore de compte? <a class="text-primary"
-                                                href="{{ route('auth.register') }}">Créer un compte</a></p>
+                                                href="{{ route('register') }}">Créer un compte</a></p>
                                     </div>
                                 </div>
                             </div>

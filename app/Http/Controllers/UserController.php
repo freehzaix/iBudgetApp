@@ -21,6 +21,18 @@ class UserController extends Controller
     {
         return view('auth.profile');
     }
+
+    public function profile_update(Request $request, $id)
+    {
+        $formUser = $request->validate([
+            'prenom' => 'required',
+        ]);
+
+        $profil = User::findOrFail($id);
+        $profil->update($formUser);
+
+        return redirect('/profile')->with('status', 'Votre compte a bien été modifié.');
+    }
     
     public function logout(Request $request): RedirectResponse
     {
@@ -95,7 +107,7 @@ class UserController extends Controller
 
         Mail::to($request->email)->send(new RegisterUserMail($user));
 
-        return redirect()->route('auth.login')->with('status', 'Votre compte a bien été créé.');
+        return redirect()->route('login')->with('status', 'Votre compte a bien été créé.');
     }
 
     /**
